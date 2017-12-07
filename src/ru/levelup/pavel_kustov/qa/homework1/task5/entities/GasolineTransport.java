@@ -1,15 +1,21 @@
 package ru.levelup.pavel_kustov.qa.homework1.task5.entities;
 
+/**
+ * Класс описывающий бензиновый транспорт
+ *  является наледником общего класса Transport
+ *  релизует интерфейс ITransport
+ *
+ *  Отличается реализацией специфичных вопросов рахода топлива
+ */
 public class GasolineTransport extends Transport implements ITransport {
 
-    private double volumeTank;
-    private  double expensePer100;
+    private double volumeTank;      // емкость бака
+    private  double expensePer100;  // расход топлива
 
     public GasolineTransport(String name, double capacity, double carrying, String numberGos, String numberRoute, Constans.Type type, double costTransport, double volumeTank, double expensePer100) {
         super(name, capacity, carrying, numberGos, numberRoute, Constans.DriveType.Petrol, type, costTransport);
         this.volumeTank = volumeTank;
         this.expensePer100 = expensePer100;
-
     }
 
     public double getVolumeTank() {
@@ -20,7 +26,7 @@ public class GasolineTransport extends Transport implements ITransport {
         this.volumeTank = volumeTank;
     }
 
-    public double getExpensePer100() {
+    private double getExpensePer100() {
         return expensePer100;
     }
 

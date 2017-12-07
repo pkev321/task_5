@@ -1,14 +1,19 @@
 package ru.levelup.pavel_kustov.qa.homework1.task5.entities;
 
+/**
+ * Класс описывающий прородителя
+ * обеспечивает описание основного функционала
+ * любого транспортного средства
+ */
 public class Transport {
-    private String name;
-    private double capacity;
-    private double carrying;
-    private String numberGos;
-    private String numberRoute;
-    private Constans.DriveType driveType;
-    private Constans.Type type;
-    private double costTransport;
+    private String name;                    // имя
+    private double capacity;                // вместимость
+    private double carrying;                // грузоподъемность
+    private String numberGos;               // государственный номер
+    private String numberRoute;             // номер маршрута
+    private Constans.DriveType driveType;   // тип двигателя
+    private Constans.Type type;             // тип транспортного средства
+    private double costTransport;           // стоимость
 
     public Transport(String name, double capacity, double carrying, String numberGos, String numberRoute, Constans.DriveType driveType, Constans.Type type, double costTransport) {
         this.name = name;
