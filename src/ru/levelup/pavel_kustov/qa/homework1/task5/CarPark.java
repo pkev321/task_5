@@ -92,7 +92,7 @@ public class CarPark {
     }
 
     /**
-     * Печать имень элементов массива
+     * Печать имён элементов массива
      * @param vArr
      */
     private void printArr(ITransport[] vArr) {

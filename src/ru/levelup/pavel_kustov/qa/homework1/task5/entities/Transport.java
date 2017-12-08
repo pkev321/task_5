@@ -3,7 +3,7 @@ package ru.levelup.pavel_kustov.qa.homework1.task5.entities;
 /**
  * Класс описывающий прородителя
  * обеспечивает описание основного функционала
- * любого транспортного средства
+ * любого транспортного средства парка общественного транспорта
  */
 public class Transport {
     private String name;                    // имя
