@@ -77,11 +77,11 @@ public class CarPark {
      * @param type Тип техники
      * @param minCapacity Минимальная вместимость
      * @param maxCapacity Максимальная вместимость
-     * @param vArr массив элементов с интерфейсом ITransport
+     * @param array массив элементов с интерфейсом ITransport
      */
-    private void findByTypeAndCapacity (Constans.Type type, int minCapacity, int maxCapacity, ITransport[] vArr) {
+    private void findByTypeAndCapacity (Constans.Type type, int minCapacity, int maxCapacity, ITransport[] array) {
         int count = 0;
-        for (ITransport tr : vArr) {
+        for (ITransport tr : array) {
             if (tr.getType().equals(type) &&  (tr.getCapacity() >= minCapacity) && (tr.getCapacity() <= maxCapacity)) {
                 System.out.println(tr.getName());
                 count++;
@@ -93,25 +93,25 @@ public class CarPark {
 
     /**
      * Печать имён элементов массива
-     * @param vArr
+     * @param array
      */
-    private void printArr(ITransport[] vArr) {
-        for (ITransport tr : vArr) {
+    private void printArr(ITransport[] array) {
+        for (ITransport tr : array) {
             System.out.println(tr.getName());
         }
     }
 
     /**
      * Сортировка по расходу топлива
-     * @param vArr массив элементов с интерфейсом ITransport
+     * @param array массив элементов с интерфейсом ITransport
      */
-    private void sortByExpense(ITransport[] vArr) {
-        for (int i = vArr.length - 1; i > 0; i--) {
+    private void sortByExpense(ITransport[] array) {
+        for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (vArr[j].getExpense() > vArr[j+1].getExpense()) {
-                    ITransport tempIT = vArr[j];
-                    vArr[j] = vArr[j+1];
-                    vArr[j+1] = tempIT;
+                if (array[j].getExpense() > array[j+1].getExpense()) {
+                    ITransport tempIT = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = tempIT;
                 }
             }
         }
