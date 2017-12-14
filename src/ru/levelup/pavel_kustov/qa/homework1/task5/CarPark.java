@@ -77,11 +77,11 @@ public class CarPark {
      * @param type Тип техники
      * @param minCapacity Минимальная вместимость
      * @param maxCapacity Максимальная вместимость
-     * @param array массив элементов с интерфейсом ITransport
+     * @param arrayOfTransport массив элементов с интерфейсом ITransport
      */
-    private void findByTypeAndCapacity (Constans.Type type, int minCapacity, int maxCapacity, ITransport[] array) {
+    private void findByTypeAndCapacity (Constans.Type type, int minCapacity, int maxCapacity, ITransport[] arrayOfTransport) {
         int count = 0;
-        for (ITransport tr : array) {
+        for (ITransport tr : arrayOfTransport) {
             if (tr.getType().equals(type) &&  (tr.getCapacity() >= minCapacity) && (tr.getCapacity() <= maxCapacity)) {
                 System.out.println(tr.getName());
                 count++;
@@ -93,25 +93,25 @@ public class CarPark {
 
     /**
      * Печать имён элементов массива
-     * @param array
+     * @param arrayOfTransport
      */
-    private void printArr(ITransport[] array) {
-        for (ITransport tr : array) {
+    private void printArr(ITransport[] arrayOfTransport) {
+        for (ITransport tr : arrayOfTransport) {
             System.out.println(tr.getName());
         }
     }
 
     /**
      * Сортировка по расходу топлива
-     * @param array массив элементов с интерфейсом ITransport
+     * @param arrayOfTransport массив элементов с интерфейсом ITransport
      */
-    private void sortByExpense(ITransport[] array) {
-        for (int i = array.length - 1; i > 0; i--) {
+    private void sortByExpense(ITransport[] arrayOfTransport) {
+        for (int i = arrayOfTransport.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (array[j].getExpense() > array[j+1].getExpense()) {
-                    ITransport tempIT = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = tempIT;
+                if (arrayOfTransport[j].getExpense() > arrayOfTransport[j+1].getExpense()) {
+                    ITransport tempIT = arrayOfTransport[j];
+                    arrayOfTransport[j] = arrayOfTransport[j+1];
+                    arrayOfTransport[j+1] = tempIT;
                 }
             }
         }
