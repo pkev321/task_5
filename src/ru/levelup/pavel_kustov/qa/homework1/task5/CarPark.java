@@ -47,8 +47,8 @@ public class CarPark {
         System.out.println("Состав общественного транспорта:");
 
         for (ITransport tr: transport ) {
-            System.out.printf("Транспортное средство %s с государственным номером %s, с рыночной стоимостью %,.2f попугаев. \n" ,tr.getName(), tr.getNumberGos(), tr.getCost());
-            summ += tr.getCost();
+            System.out.printf("Транспортное средство %s с государственным номером %s, с рыночной стоимостью %,.2f попугаев. \n" ,tr.getName(), tr.getNumberGos(), tr.getCostTransport());
+            summ += tr.getCostTransport();
         }
         System.out.printf("Общая стоимость автотранспорта: %,.2f", summ);
         System.out.println("");

@@ -34,12 +34,12 @@ public class ElectricTransport extends Transport implements ITransport {
     public void setSupplyVoltage(double supplyVoltage) {
         this.supplyVoltage = supplyVoltage;
     }
-
+/*
     @Override
     public double getCost() {
         return getCostTransport();
     }
-
+*/
     @Override
     public double getExpense() {
         return 0;

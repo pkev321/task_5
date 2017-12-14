@@ -33,12 +33,12 @@ public class GasolineTransport extends Transport implements ITransport {
     public void setExpensePer100(double expensePer100) {
         this.expensePer100 = expensePer100;
     }
-
+/*
     @Override
     public double getCost() {
         return getCostTransport();
     }
-
+*/
     @Override
     public double getExpense() {
         return getExpensePer100();

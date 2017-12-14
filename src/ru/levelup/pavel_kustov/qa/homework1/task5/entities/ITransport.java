@@ -5,7 +5,7 @@ package ru.levelup.pavel_kustov.qa.homework1.task5.entities;
  *
  */
 public interface ITransport {
-    double getCost();               // получение стомости
+    double getCostTransport();      // получение стомости
     double getExpense();            // получение расхода топлива
     String getName();               // получение имени
     String getNumberGos();          // получение государственного номера
